@@ -1,0 +1,55 @@
+# gostardardk8s Global Configuration
+
+# casbin configuration
+casbin:
+    model-path: './resource/rbac_model.conf'
+
+# jwt configuration
+jwt:
+    signing-key: ''
+
+# mysql connect configuration
+mysql:
+    username: root
+    password: ''
+    path: ''
+    db-name: ''
+    config: 'charset=utf8&parseTime=True&loc=Local'
+    max-idle-conns: 10
+    max-open-conns: 10
+    log-mode: false
+
+#sqlite 配置
+sqlite:
+    path: db.db
+    log-mode: true
+    config: 'loc=Asia/Shanghai'
+
+# oss configuration
+
+
+redis:
+    addr: ''
+    password: ''
+    db: 0
+
+# system configuration
+system:
+    use-multipoint: true
+    env: 'public'  # Change to "develop" to skip authentication for development mode
+    addr: 8000
+    db-type: "mysql"  # support mysql/sqlite
+
+# captcha configuration
+captcha:
+    key-long: 6
+    img-width: 240
+    img-height: 80
+
+# logger configuration
+log:
+    prefix: '[gostardardk8s]'
+    log-file: true
+    stdout: 'DEBUG'
+    file: 'DEBUG'
+
